@@ -1,0 +1,86 @@
+Bitcoin Market Sentiment & Trader Behavior Analysis
+
+---
+
+Executive Summary
+-----------------
+This report presents a comprehensive analysis of the relationship between Bitcoin market sentiment and trader behavior, leveraging two key datasets: the Bitcoin Market Sentiment Index and Hyperliquid historical trader data. The goal is to understand how trading actions—profitability, risk, volume, and leverage—align or diverge from overall market sentiment (fear vs greed), and to identify actionable insights for smarter trading strategies.
+
+1. Introduction
+---------------
+Cryptocurrency markets are highly influenced by trader psychology and sentiment. By analyzing both market sentiment and actual trading data, this project aims to uncover patterns that can inform risk management, trading decisions, and market predictions.
+
+2. Datasets
+-----------
+2.1 Bitcoin Market Sentiment Dataset
+- Columns: Date, Value, Classification (Fear, Greed, Extreme Fear, Neutral)
+- Description: Daily sentiment index reflecting the market’s emotional state.
+
+2.2 Hyperliquid Historical Trader Data
+- Columns: Account, Coin, Execution Price, Size Tokens, Size USD, Side, Timestamp IST, Start Position, Direction, Closed PnL, Leverage, etc.
+- Description: Detailed trade-level data capturing trader actions, positions, and outcomes.
+
+3. Methodology
+--------------
+3.1 Data Loading & Cleaning
+- Imported both datasets and inspected for missing values.
+- Standardized date formats and merged datasets on the date field.
+- Ensured column names and data types were consistent for analysis.
+
+3.2 Exploratory Data Analysis (EDA)
+- Visualized sentiment distribution over time.
+- Analyzed trader profitability, risk (PnL volatility), trading volume, and leverage by sentiment classification.
+
+3.3 Advanced Analysis
+- Segmented traders by profitability and risk.
+- Examined volume and leverage trends during different sentiment regimes.
+- Identified hidden signals and anomalies in trading behavior.
+
+4. Key Findings
+---------------
+4.1 Profitability
+- Average trader profitability is higher during periods of market greed. Fear and extreme fear correlate with lower profits.
+- Greedy markets may offer more opportunities, but also higher risk.
+
+4.2 Risk
+- Risk, measured as the standard deviation of PnL, increases during greed, indicating more volatile trading behavior.
+- Traders should apply stricter risk management during greedy sentiment periods.
+
+4.3 Volume
+- Trading volume surges in greedy markets, reflecting increased participation and activity.
+- Volume spikes can signal regime changes and increased market interest.
+
+4.4 Leverage
+- Traders use higher leverage in greedy markets, showing greater risk appetite.
+- Leverage spikes may precede market corrections or increased volatility.
+
+4.5 Hidden Trends
+- Extreme sentiment events often coincide with spikes in risk and leverage, which may signal opportunities or caution for traders.
+- Monitoring sentiment and leverage can help anticipate market turning points.
+
+5. Visualizations
+-----------------
+- Sentiment distribution barplots.
+- Profitability, risk, volume, and leverage by sentiment.
+- All visual outputs are saved in the `outputs` directory for reference.
+
+6. Recommendations
+-------------------
+- Monitor sentiment shifts to anticipate changes in trader risk appetite and profitability.
+- Use leverage and volume spikes as early signals for market regime changes.
+- Apply risk management strategies during periods of extreme sentiment.
+- Further research: Explore predictive modeling and clustering for deeper insights.
+
+7. How to Reproduce
+-------------------
+- Run `notebook_1.ipynb` in Google Colab or Jupyter Notebook.
+- Ensure datasets are present in the `csv_files` directory.
+- Execute all cells step-by-step for full analysis and visualization.
+
+8. Limitations & Future Work
+----------------------------
+- The analysis is limited to available historical data and sentiment indices.
+- Future work could include real-time sentiment tracking, predictive modeling, and integration of additional market features.
+
+
+
